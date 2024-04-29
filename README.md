@@ -1,8 +1,4 @@
 <<<<<<< HEAD
-# project_nature
-An end-to-end project on image classification 
-=======
-<<<<<<< HEAD
 project_nature
 ==============================
 
@@ -64,4 +60,3 @@ Project Organization
 # project_nature
 An end-to-end project on image classification 
 >>>>>>> 2dc5f2dcbbcd4fa42640dc038495fd8f51a8494b
->>>>>>> 56ede8029632947ac44c7890d43335effe8cd1cf
