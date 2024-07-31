@@ -91,3 +91,10 @@ target/
 
 data/*
 models/*
+/models
+/dvclive
+# data.dvc
+/data
+data
+
+seldon/

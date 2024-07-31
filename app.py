@@ -7,7 +7,7 @@ from joblib import load
 from keras.preprocessing.image import load_img, img_to_array
 import numpy as np
 import tensorflow as tf
-from src.pipeline.predict import PredictionPipeline
+from src.models.predict_model import PredictionPipeline
 
 
 # os.putenv('LANG', 'en_US.UTF-8')
@@ -15,13 +15,12 @@ from src.pipeline.predict import PredictionPipeline
 
 app = Flask(__name__)
 CORS(app)
-
+model_path = "models/model.h5"
+model = tf.keras.models.load_model(model_path)
+# model = load(model_path)
 
 
 def predict_image(filename):
-    model_path = "models/model.h5"
-    model = tf.keras.models.load_model(model_path)
-
     img_ = load_img(filename, target_size=(228, 228))
     img_array = img_to_array(img_)
     img_processed = np.expand_dims(img_array, axis=0)

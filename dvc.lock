@@ -1,0 +1,26 @@
+schema: '2.0'
+stages:
+  build_features:
+    cmd: python .\src\features\build_features.py
+    deps:
+    - path: .\data\raw\
+      hash: md5
+      md5: e4c58b8c81b05208207ecdad25120f53.dir
+      size: 368859597
+      nfiles: 24335
+    - path: .\src\features\build_features.py
+      hash: md5
+      md5: 5717e077e4676a2a9598ff9d7dfaa472
+      size: 2468
+  train_model:
+    cmd: python .\src\models\train_model.py .\data\processed\
+    deps:
+    - path: .\data\processed\
+      hash: md5
+      md5: 4aeb7c9486718a88b78f930eb24f7524.dir
+      size: 221813549
+      nfiles: 17098
+    - path: .\src\models\train_model.py
+      hash: md5
+      md5: 23fe6d268516290d55574378a21b3f02
+      size: 2434
